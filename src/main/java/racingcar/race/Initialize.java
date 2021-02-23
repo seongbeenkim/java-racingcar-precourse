@@ -3,6 +3,7 @@ package racingcar.race;
 import racingcar.Car;
 import racingcar.race.RaceInformation;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,7 +18,13 @@ public class Initialize {
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
         String nameBuffer = scanner.next();
         System.out.println("시도할 회수는 몇회인가요?");
-        raceInformation.initRegisterInformation(scanner.nextInt());
+
+        try {
+            raceInformation.initRegisterInformation(scanner.nextInt());
+        } catch (InputMismatchException e) {
+            System.out.println("[ERROR] 시도 횟수는 숫자여야 한다.");
+            System.exit(0);
+        }
         raceInformation.initCarInformations(raceInformation.splitCarNameBuffer(nameBuffer));
     }
 }
