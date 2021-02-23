@@ -19,14 +19,5 @@ public class Initialize {
         System.out.println("시도할 회수는 몇회인가요?");
         raceInformation.initRegisterInformation(scanner.nextInt());
         raceInformation.initCarInformations(raceInformation.splitCarNameBuffer(nameBuffer));
-
-        List<Car> list = raceInformation.getCarInformations();
-
-        for (Car car : list) {
-            System.out.print(car.getName() + " ");
-        }
-
-        Race race = new Race();
-        race.race();
     }
 }

@@ -1,6 +1,8 @@
 package racingcar;
 
 import racingcar.race.Initialize;
+import racingcar.race.Race;
+import racingcar.race.RaceInformation;
 
 import java.util.Scanner;
 
@@ -12,6 +14,10 @@ public class Application {
         Initialize initialize = new Initialize();
         initialize.init(scanner);
 
+        Race race = new Race();
+        race.raceAllAttempt();
+
+        RaceInformation.getInstance().printWinnerList();
         scanner.close();
     }
 }

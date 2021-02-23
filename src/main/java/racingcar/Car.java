@@ -21,11 +21,10 @@ public class Car {
         return position;
     }
 
-    public int drive() {
+    public void drive() {
         if (isProgress()) {
-            return ++position;
+            position++;
         }
-        return position;
     }
 
     public boolean isProgress() {
@@ -33,5 +32,17 @@ public class Car {
             return true;
         }
         return false;
+    }
+
+    public void printInfo() {
+        System.out.print(name + " : ");
+        printTracking();
+        System.out.println();
+    }
+
+    public void printTracking() {
+        for (int i = 0; i < position; i++) {
+            System.out.print("-");
+        }
     }
 }

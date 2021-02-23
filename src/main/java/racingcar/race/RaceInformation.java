@@ -36,4 +36,40 @@ public class RaceInformation {
     public List<Car> getCarInformations() {
         return carInformations;
     }
+
+    public void setCarInformations(List<Car> carInformations) {
+        this.carInformations = carInformations;
+    }
+
+    public int getMaxPosition() {
+        int max = -1;
+
+        for (Car car : carInformations) {
+            max = Math.max(max, car.getPosition());
+        }
+
+        return max;
+    }
+
+    public List<String> getWinnerList() {
+        List<String> winnerList = new ArrayList<String>();
+        int max = getMaxPosition();
+
+        for (Car car : carInformations) {
+            if (car.getPosition() == max) {
+                winnerList.add(car.getName());
+            }
+        }
+        return winnerList;
+    }
+
+    public void printWinnerList() {
+        List<String> winnerList = getWinnerList();
+
+        System.out.print("최종 우승자 : ");
+        for (int i = 0; i < winnerList.size() - 1; i++) {
+            System.out.print(winnerList.get(i) + " ,");
+        }
+        System.out.println(winnerList.get(winnerList.size() - 1));
+    }
 }
