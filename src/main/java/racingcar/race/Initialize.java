@@ -1,10 +1,6 @@
 package racingcar.race;
 
-import racingcar.Car;
-import racingcar.race.RaceInformation;
-
 import java.util.InputMismatchException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Initialize {
