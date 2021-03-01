@@ -9,6 +9,7 @@ public class RaceInformation {
     private int numberOfAttempt;
     private List<Car> carInformations = new ArrayList<>();
     private static RaceInformation raceInformation= new RaceInformation();
+    private final String CAR_NAME_SPLITER = ",";
 
     private RaceInformation() { }
 
@@ -30,7 +31,7 @@ public class RaceInformation {
     }
 
     public String[] splitCarNameBuffer(String carNameBuffer) {
-        return carNameBuffer.split(",");
+        return carNameBuffer.split(CAR_NAME_SPLITER);
     }
 
     public List<Car> getCarInformations() {
