@@ -1,6 +1,6 @@
 package racingcar;
 
-import racingcar.race.Initialize;
+import racingcar.race.Initialization;
 import racingcar.race.Race;
 import racingcar.race.RaceInformation;
 
@@ -11,8 +11,8 @@ public class Application {
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
         // TODO 구현 진행
-        Initialize initialize = new Initialize();
-        initialize.init(scanner);
+        Initialization initialization = new Initialization();
+        initialization.init(scanner);
 
         Race race = new Race();
         race.raceAllAttempt();

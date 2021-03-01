@@ -3,10 +3,10 @@ package racingcar.race;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Initialize {
+public class Initialization {
     private RaceInformation raceInformation;
 
-    public Initialize() {
+    public Initialization() {
         raceInformation = RaceInformation.getInstance();
     }
 
