@@ -1,12 +1,12 @@
-package racingcar;
+package racingcar.model;
 
 import utils.RandomUtils;
 
 public class Car {
     private final String name;
     private int position = 0;
-    final int startInclusive = 0;
-    final int endtInclusive = 9;
+    final public static int START_INCLUSIVE = 0;
+    final public static int END_INCLSIVE = 9;
 
     public Car(String name) {
         this.name = name;
@@ -28,10 +28,7 @@ public class Car {
     }
 
     public boolean isProgress() {
-        if (RandomUtils.nextInt(startInclusive, endtInclusive) >= 4) {
-            return true;
-        }
-        return false;
+        return RandomUtils.nextInt(START_INCLUSIVE, END_INCLSIVE) >= 4;
     }
 
     public void printInfo() {
