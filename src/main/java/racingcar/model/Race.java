@@ -5,11 +5,17 @@ import java.util.List;
 
 public class Race {
     private List<Car> cars;
-    private int raceNumber;
+    private int round;
 
-    public Race(int raceNumber, List<Car> cars) {
-        this.raceNumber = raceNumber;
-        this.cars = cars;
+    public Race() {
+        cars = new ArrayList<>();
+    }
+
+    public void initRound(int round) {
+        this.round = round;
+    }
+    public void addCar(Car car) {
+        cars.add(car);
     }
 
     public List<Car> getCars() {
@@ -17,6 +23,6 @@ public class Race {
     }
 
     public int getRaceNumber() {
-        return raceNumber;
+        return round;
     }
 }
