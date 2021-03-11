@@ -3,10 +3,7 @@ package racingcar.controller;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import racingcar.model.Race;
-import racingcar.view.InputView;
-import racingcar.view.OutputView;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;

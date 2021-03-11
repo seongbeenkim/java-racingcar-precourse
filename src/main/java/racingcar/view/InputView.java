@@ -19,6 +19,7 @@ public class InputView {
         System.out.println(Constant.INIT_CAR_MESSAGE);
         String[] carName = raceController.splitCarName(scanner.nextLine());
         raceController.addCar(carName);
+        System.out.println(Constant.INIT_ROUND_MESSAGE);
         raceController.initRound(scanner.nextInt());
     }
 }

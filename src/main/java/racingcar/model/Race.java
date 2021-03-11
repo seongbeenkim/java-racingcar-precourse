@@ -22,7 +22,7 @@ public class Race {
         return cars;
     }
 
-    public int getRaceNumber() {
+    public int getRound() {
         return round;
     }
 }
