@@ -21,6 +21,7 @@ public class WinnerController {
     }
 
     public void showWinner() {
+        addWinners();
         winnerView.printWinner();
     }
 
@@ -32,7 +33,7 @@ public class WinnerController {
                 .getPosition();
     }
 
-    public void addWinners() {
+    private void addWinners() {
         List<Car> cars = race.getCars().stream()
                 .filter(car -> car.getPosition() == getMaxPosition())
                 .collect(Collectors.toList());

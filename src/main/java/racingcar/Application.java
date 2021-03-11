@@ -15,6 +15,7 @@ public class Application {
         // TODO 구현 진행
         Race race = new Race();
         Winner winner = new Winner();
+
         RaceController raceController = new RaceController(race, scanner);
         WinnerController winnerController = new WinnerController(winner, race);
 
