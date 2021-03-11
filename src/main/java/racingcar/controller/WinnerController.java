@@ -37,10 +37,11 @@ public class WinnerController {
         List<Car> cars = race.getCars().stream()
                 .filter(car -> car.getPosition() == getMaxPosition())
                 .collect(Collectors.toList());
-        cars.stream()
-                .forEach(car -> {
-                    winner.addWinner(car);
-                });
+        cars.stream().forEach(this::addCar);
+    }
+
+    private void addCar(Car car) {
+        winner.addWinner(car);
     }
 
     public List<Car> getWinners() {

@@ -2,8 +2,8 @@ package racingcar.view;
 
 import racingcar.constant.Constant;
 import racingcar.controller.RaceController;
-import racingcar.model.Race;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class InputView {
@@ -20,6 +20,11 @@ public class InputView {
         String[] carName = raceController.splitCarName(scanner.nextLine());
         raceController.addCar(carName);
         System.out.println(Constant.INIT_ROUND_MESSAGE);
-        raceController.initRound(scanner.nextInt());
+        try {
+            raceController.initRound(scanner.nextInt());
+        } catch (InputMismatchException e) {
+            System.out.println(Constant.ERROR_MESSAGE_FORMAT + Constant.ILLEGAL_NUMBER_FORMAT);
+            System.exit(1);
+        }
     }
 }

@@ -14,8 +14,10 @@ public class WinnerView {
     }
 
     public void printWinner() {
+        String winnerMessage;
+        
         List<Car> cars = winnerController.getWinners();
-        String winnerMessage = getWinnerMessage(cars);
+        winnerMessage = getWinnerMessage(cars);
         System.out.println(winnerMessage);
     }
 
