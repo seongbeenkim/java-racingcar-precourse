@@ -13,18 +13,9 @@ import java.util.Scanner;
 
 public class RaceController {
     private Race race;
-    private InputView inputView;
-    private RaceView raceView;
 
     public RaceController(Race race, Scanner scanner) {
         this.race = race;
-        this.inputView = new InputView(scanner, this);
-        this.raceView = new RaceView(this);
-    }
-
-    public void race() {
-        inputView.printInputView();
-        raceView.printRace();
     }
 
     public String[] splitCarName (String carName) {
@@ -36,9 +27,11 @@ public class RaceController {
         Arrays.stream(carNames)
                 .forEach(carName -> race.addCar(new Car(carName)));
     }
+
     public void initRound(int round) {
         this.race.initRound(round);
     }
+
     public List<Car> getCarInformation() {
         return race.getCars();
     }

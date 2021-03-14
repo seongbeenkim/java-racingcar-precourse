@@ -11,18 +11,11 @@ import racingcar.view.WinnerView;
 public class WinnerController {
     private Winner winner;
     private Race race;
-    private WinnerView winnerView;
 
 
     public WinnerController(Winner winner, Race race) {
         this.winner = winner;
         this.race = race;
-        winnerView = new WinnerView(this);
-    }
-
-    public void showWinner() {
-        addWinners();
-        winnerView.printWinner();
     }
 
     private int getMaxPosition() {
