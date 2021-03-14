@@ -14,10 +14,7 @@ public class Car {
 
     //TODO change public to private
     public boolean isCarProgress(int randomNUmber) {
-        if (randomNUmber >= Constant.PROGRESS_RANGE) {
-            return true;
-        }
-        return false;
+        return randomNUmber >= Constant.PROGRESS_RANGE;
     }
 
     public void drive(boolean isCarProgress) {
