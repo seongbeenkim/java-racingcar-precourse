@@ -6,11 +6,10 @@ import java.util.stream.Collectors;
 import racingcar.model.Car;
 import racingcar.model.Race;
 import racingcar.model.Winner;
-import racingcar.view.WinnerView;
 
 public class WinnerController {
-    private Winner winner;
-    private Race race;
+    private final Winner winner;
+    private final Race race;
 
 
     public WinnerController(Winner winner, Race race) {
@@ -20,13 +19,12 @@ public class WinnerController {
 
     private int getMaxPosition() {
         List<Car> cars = race.getCars();
-        return cars.stream()
+        return  cars.stream()
                 .max((o1, o2) -> o1.getPosition() - o2.getPosition())
-                .get()
-                .getPosition();
+                .get().getPosition();
     }
 
-    private void addWinners() {
+    public void addWinners() {
         List<Car> cars = race.getCars().stream()
                 .filter(car -> car.getPosition() == getMaxPosition())
                 .collect(Collectors.toList());

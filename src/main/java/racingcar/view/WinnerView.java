@@ -15,7 +15,7 @@ public class WinnerView {
 
     public void printWinner() {
         String winnerMessage;
-        
+        winnerController.addWinners();
         List<Car> cars = winnerController.getWinners();
         winnerMessage = getWinnerMessage(cars);
         System.out.println(winnerMessage);

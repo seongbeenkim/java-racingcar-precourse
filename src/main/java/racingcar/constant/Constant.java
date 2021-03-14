@@ -14,6 +14,7 @@ public class Constant {
 
     public static final String ERROR_MESSAGE_FORMAT = "[ERROR] ";
     public static final String ILLEGAL_NUMBER_FORMAT = "시도 횟수는 숫자여야 한다.";
+    public static final String PRINT_CAR_DELIMITER = ", ";
 
     public static final String NEXT_LINE = "\n";
 }

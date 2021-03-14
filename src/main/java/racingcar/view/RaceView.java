@@ -11,7 +11,7 @@ public class RaceView {
 
     public RaceView(RaceController raceController) {
         this.raceController = raceController;
-    };
+    }
 
     public void printRace() {
         for(int i = 0; i < raceController.getRoundInformation(); i++) {

@@ -12,7 +12,6 @@ public class Car {
         this.name = name;
     }
 
-    //TODO change public to private
     public boolean isCarProgress(int randomNUmber) {
         return randomNUmber >= Constant.PROGRESS_RANGE;
     }
@@ -43,6 +42,8 @@ public class Car {
         Car car = (Car) other;
         return position == car.position && name.equals(car.name);
     }
+
+
 
     @Override
     public int hashCode() {

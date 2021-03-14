@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class RaceController {
-    private Race race;
+    private final Race race;
 
     public RaceController(Race race, Scanner scanner) {
         this.race = race;
