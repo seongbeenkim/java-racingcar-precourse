@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Race {
-    private List<Car> cars;
+    final private List<Car> cars;
     private int round;
 
     public Race() {
+        this.round = 0;
         cars = new ArrayList<>();
     }
 

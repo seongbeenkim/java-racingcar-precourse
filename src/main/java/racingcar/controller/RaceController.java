@@ -36,11 +36,9 @@ public class RaceController {
         Arrays.stream(carNames)
                 .forEach(carName -> race.addCar(new Car(carName)));
     }
-
     public void initRound(int round) {
-        race.initRound(round);
+        this.race.initRound(round);
     }
-
     public List<Car> getCarInformation() {
         return race.getCars();
     }
